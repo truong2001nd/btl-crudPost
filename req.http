@@ -1,0 +1,62 @@
+GET http://localhost:5000
+
+
+###
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "pham truong",
+    "email": "admin@example.com",
+    "password": "123"
+}
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123"
+}
+
+// post 
+
+### 
+
+GET http://localhost:5000/api/post
+
+###
+
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwODUxNmIyZjJhMTc2YzRjYjc1Y2MiLCJpYXQiOjE2ODQwNDcxMjZ9.AWny98VQBVOVOrgSty8U9WvLc-S3esP9gFe6lcmyKEo
+
+{
+  "title": "React 1",
+  "content": "React 1"
+}
+
+
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwODUxNmIyZjJhMTc2YzRjYjc1Y2MiLCJpYXQiOjE2ODQwNDcxMjZ9.AWny98VQBVOVOrgSty8U9WvLc-S3esP9gFe6lcmyKEo
+
+
+
+###
+PUT http://localhost:5000/api/post/64608a8f83ee717b88febed3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwODUxNmIyZjJhMTc2YzRjYjc1Y2MiLCJpYXQiOjE2ODQwNDcxMjZ9.AWny98VQBVOVOrgSty8U9WvLc-S3esP9gFe6lcmyKEo
+
+{
+  "title": "React 22",
+  "content": "React 223",
+  "published": true
+}
+
+
+###
+DELETE  http://localhost:5000/api/post/64608a8f83ee717b88febed3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwODUxNmIyZjJhMTc2YzRjYjc1Y2MiLCJpYXQiOjE2ODQwNDcxMjZ9.AWny98VQBVOVOrgSty8U9WvLc-S3esP9gFe6lcmyKEo
